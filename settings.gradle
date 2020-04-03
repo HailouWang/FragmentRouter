@@ -1,0 +1,3 @@
+rootProject.name='FragmentRouter'
+include ':app'
+include ':fragmentrouter'

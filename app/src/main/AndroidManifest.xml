@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hailouwang.fragmentrouter.sample">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".singleActivity.RouterActivity" />
+
+        <activity-alias
+            android:name=".fragment1.FragmentDemosActivity1"
+            android:label="FragmentDemosActivity1"
+            android:targetActivity=".singleActivity.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.hailouwang.fragmentrouter.sample.fragment1.FragmentDemos1" />
+        </activity-alias>
+
+        <activity-alias
+            android:name=".fragment2.FragmentDemosActivity2"
+            android:label="FragmentDemosActivity2"
+            android:targetActivity=".singleActivity.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.hailouwang.fragmentrouter.sample.fragment2.FragmentDemos2" />
+        </activity-alias>
+
+        <activity-alias
+            android:name=".fragment3.FragmentDemosActivity3"
+            android:label="FragmentDemosActivity3"
+            android:targetActivity=".singleActivity.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.hailouwang.fragmentrouter.sample.fragment3.FragmentDemos3" />
+        </activity-alias>
+    </application>
+
+</manifest>
